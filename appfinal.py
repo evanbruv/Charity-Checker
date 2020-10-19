@@ -1,6 +1,3 @@
-#plz save 5:07
-#wont work w gibberish cuz of newslinks
-
 import validators, time
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
