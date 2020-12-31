@@ -1,0 +1,66 @@
+{% extends 'skel.html' %}
+
+
+{% block head %}
+<title>About Charity Checker</title>
+{% endblock %}
+
+
+{% block body %}
+<div class='content'>
+
+  <header>
+    <img src="https://cdn.pixabay.com/photo/2017/02/01/10/59/bag-2029642__340.png"
+        style="float: center; margin-right: 0px; margin-bottom: 0px;"/>
+    <h1>Charity Checker</h1>
+    <p>By Evan Torres<p>
+  <nav>
+    <div class='form'>
+      <form action="/", method="POST">
+        <ul>
+          <li>Name of Organization: <input type="text" name="content" id="content" autocomplete="off" /></li>
+          <li> </li>
+          <li><input type="submit", value="Submit" /></li>
+          <li>|</li>
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li>|</li>
+          <li><a href="{{ url_for('aboutcc') }}">About Charity Checker</a></li>
+        </ul>
+      </form>
+      </div>
+  </nav>
+  </header>
+
+  <div id="about-cc">
+    <div class="data-section">
+      <h2>What is Charity Checker?</h2>
+        <p>I participated in the <a href="https://www.congressionalappchallenge.us/" target="_blank">2020 Congressional App Challenge</a>. It is a nation wide event and I competed within my state district. What I developed is a flask app that determines how reputable a charity is by considering data about that charity found on the web.</p>
+      <div class="clear"></div>
+    </div>
+
+    <div class="data-section">
+        <h2>What does it do?</h2>
+          <p>Users would input the name of a charity they want to donate to in the search bar. The program then looks on the IRS site to find out if it is an established non-profit organization, to see if the charity can be exempt from federal tax income, and to pull the charity's legality data. The program also looks for the chairty's data on charitynavigator.org, that is where professional ratings and critical information such as after costs can be observed. Along with that, Charity Checker supplies the latest news articles about the charity, and gives a summary based upon the data it found about it from the web.</p>
+        <div class="clear"></div>
+    </div>
+
+    <div class="data-section">
+        <h2>Why was Charity Checker created?</h2>
+          <p>I do not usually watch the news but whenever I do, most of the time its depressing. I would see all of the current global issues we face and see that so many people are living so well while others are not living so well. While some people are worried about upgrading their iPhone, other people are worried about how they can get food on the table, and I wondered how I could help and lend a hand. Thus, I created Charity Checker to help otheres give to the cause.</p>
+        <div class="clear"></div>
+      </div>
+
+      <div class="data-section">
+        <h2>How does it work?</h2>
+          <p>The text editor I used to develop my app was atom. The front end is written in HTML/CSS and the back end is written in Python. Charity Checker was built using a software called Flask, it is a web framework that creates web applications in Python. In order to retrieve data from the web, I created an algorithm that scrapes critical data from different websites. It does this by opening a headless browsing page with selenium python, searching targeted websites in different windows of the headless browsing page, and locating elements on those websites using their xpaths which contain the information being scraped. The main python file inputs and outputs data to and from the HTML and CSS files, and is where all the scraping occurs.</p>
+        <div class="clear"></div>
+      </div>
+
+
+
+  </div>
+
+
+
+</div>
+{% endblock %}
