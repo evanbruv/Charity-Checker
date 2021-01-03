@@ -48,7 +48,7 @@ def index():
         #General Constants
         credsToI = "According to the IRS website..."
         credsToII = "According to charitynavigator.org..."
-        symbolsAlert = "Search terms in the Name field can only include letters, numbers, @, /, \, &, %, (), *, hyphens, spaces, apostrophes, periods, commas, and quotation marks."
+        symbolsAlert = "Search terms in the Name field can only include letters, numbers, @, &, %, (), *, hyphens, slashes spaces, apostrophes, periods, commas, and quotation marks."
         meaning = "What does this mean?"
         readFiveOh = "Read more about 501(c)3 Organizations"
         ccSummary = "Charity Checker's \"" + str(orgName) + "\" summary:"
@@ -187,7 +187,7 @@ def index():
 @app.route('/aboutcc', methods=['POST', 'GET'])
 def aboutcc():
     if request.method == 'POST':
-        return redirct(url_for('index'))
+        return url_for('index')
     return render_template('aboutcc.html')
 
 
