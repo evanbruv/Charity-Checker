@@ -1,4 +1,4 @@
-import validators, time
+import time
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from flask import Flask, render_template, url_for, request
