@@ -2,7 +2,6 @@ import validators, time
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from flask import Flask, render_template, url_for, request
-from selenium.webdriver.common.keys import Keys
 from fake_useragent import UserAgent
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
